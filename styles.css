@@ -1,9 +1,31 @@
-#container{
+body{
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
-    }
-    .caja:hover {
-        background-color: lightcoral; /* Cambia de color al pasar el mouse */
-    }
+}
+
+#container {
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column; /* Asegura que las filas se apilen verticalmente */
+  }
+
+  .row {
+    display: flex; /* Hace que los divs dentro de cada fila se alineen en línea */
+    flex: 1; /* Distribuye uniformemente las filas */
+  }
+
+  .caja {
+    
+    border: 1px solid black;
+    flex: 1; /* Hace que todas las cajas dentro de la fila tengan el mismo tamaño */
+  }
+  #change-size{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }

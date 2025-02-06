@@ -10,7 +10,11 @@
     <div id="container">
         <div id="rows"></div>
     </div>
-    
+    <div id="change-size">
+        <label for="volumen">Tamaño</label>
+        <input type="range" id="volumen" min="0" max="64" value="16" oninput="actualizarValor(this.value)">
+        <span id="valor">16</span>
+    </div>
 </body>
 <script src="script.js"></script>
 </html>
