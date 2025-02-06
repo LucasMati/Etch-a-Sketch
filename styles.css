@@ -1,0 +1,9 @@
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    }
+    .caja:hover {
+        background-color: lightcoral; /* Cambia de color al pasar el mouse */
+    }
