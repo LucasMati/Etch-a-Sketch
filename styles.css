@@ -1,22 +1,35 @@
-body{
+body {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-#container {
+#etch-container {
+    background-color: rgb(180, 1, 1);
+    
+   
+    border-radius: 10px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#pixels-container {
+    margin: 20px;
+    background-color: white;
     width: 500px;
     height: 500px;
     border: 2px solid black;
     display: flex;
     flex-direction: column; /* Asegura que las filas se apilen verticalmente */
-  }
+}
 
-  .row {
+.row {
     display: flex; /* Hace que los divs dentro de cada fila se alineen en línea */
     flex: 1; /* Distribuye uniformemente las filas */
-  }
+}
 
   .caja {
     
@@ -29,3 +42,10 @@ body{
     align-items: center;
     justify-content: center;
   }
+
+  
+#title{
+    font-size: 10px;
+    color: white;
+    margin: 0px;
+}

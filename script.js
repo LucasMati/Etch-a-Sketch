@@ -1,4 +1,4 @@
-const container = document.getElementById("container");
+const container = document.getElementById("pixels-container");
   let tam = 16;
 
   function actualizarValor(valor) {
@@ -21,6 +21,30 @@ const container = document.getElementById("container");
           }
           container.appendChild(newRow);
       }
+      draw()
   }
 
   changeSize(tam); // Carga inicial
+  function draw() {
+    let elementos = document.querySelectorAll(".caja");
+    let activado = false;
+
+    elementos.forEach((elemento) => {
+        elemento.addEventListener("mousedown", () => {
+            
+            activado = true;
+            elemento.style.backgroundColor = "blue"; // Pinta el cuadro al hacer clic
+        });
+
+        elemento.addEventListener("mousemove", () => {
+            if (activado) {
+                elemento.style.backgroundColor = "blue"; // Pinta al arrastrar
+            }
+        });
+    });
+
+    // Evento global para desactivar el "modo de pintura"
+    document.addEventListener("mouseup", () => {
+        activado = false;
+    });
+}

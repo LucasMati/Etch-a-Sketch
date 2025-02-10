@@ -7,14 +7,20 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="container">
-        <div id="rows"></div>
+    <div id="etch-container">
+        <div id="title">
+            <h1>Pixel Art</h1>
+        </div>
+        <div id="pixels-container">
+            <div id="rows"></div>
+        </div>
     </div>
     <div id="change-size">
         <label for="volumen">Tamaño</label>
         <input type="range" id="volumen" min="0" max="64" value="16" oninput="actualizarValor(this.value)">
         <span id="valor">16</span>
     </div>
+    <input type="color" id="colorPicker" value="#ff0000">
 </body>
 <script src="script.js"></script>
 </html>
