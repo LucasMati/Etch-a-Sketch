@@ -3,10 +3,20 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background-color: rgb(85, 85, 85);
 }
-
-#etch-container {
+.container{
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
     background-color: rgb(180, 1, 1);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+}
+#etch-container {
+   
     
    
     border-radius: 10px;
@@ -41,11 +51,67 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
   }
-
-  
+.slider{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.buttons{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+button{
+  width: 100px;
+  height: 30px;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgb(78, 78, 78);
+  color: white;
+  border: none;
+}
 #title{
     font-size: 10px;
     color: white;
     margin: 0px;
+}
+ #eraser{
+  margin: 10px;
+ }
+ footer {
+  width: 100%;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  
+  bottom: 0;
+  left: 0;
+}
+
+footer a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin-left: 8px;
+}
+
+footer img {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
+
+footer span {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
 }

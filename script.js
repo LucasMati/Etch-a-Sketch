@@ -1,6 +1,13 @@
 const container = document.getElementById("pixels-container");
   let tam = 16;
-
+  const colorPicker = document.getElementById("colorPicker");
+  let color = colorPicker.value;
+  const eraser = document.getElementById("eraser");
+  const reset = document.getElementById("reset");
+  
+    colorPicker.addEventListener("input", () => {
+        color = colorPicker.value;
+    });
   function actualizarValor(valor) {
       document.getElementById("valor").textContent = valor;
       tam = valor;
@@ -23,22 +30,25 @@ const container = document.getElementById("pixels-container");
       }
       draw()
   }
-
+  
   changeSize(tam); // Carga inicial
   function draw() {
     let elementos = document.querySelectorAll(".caja");
     let activado = false;
-
+    
+    eraser.addEventListener("click", () =>{
+        color = "white";
+    });
     elementos.forEach((elemento) => {
         elemento.addEventListener("mousedown", () => {
             
             activado = true;
-            elemento.style.backgroundColor = "blue"; // Pinta el cuadro al hacer clic
+            elemento.style.backgroundColor = color; // Pinta el cuadro al hacer clic
         });
 
         elemento.addEventListener("mousemove", () => {
             if (activado) {
-                elemento.style.backgroundColor = "blue"; // Pinta al arrastrar
+                elemento.style.backgroundColor = color; // Pinta al arrastrar
             }
         });
     });
@@ -48,3 +58,7 @@ const container = document.getElementById("pixels-container");
         activado = false;
     });
 }
+reset.addEventListener("click", () =>{
+    container.removeChild(container.firstChild);
+    changeSize(tam);
+});

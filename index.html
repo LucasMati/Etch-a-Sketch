@@ -3,24 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOLA</title>
+    <title>Etch-a-Sketch</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="etch-container">
-        <div id="title">
-            <h1>Pixel Art</h1>
+    <div class="container">
+        <div id="etch-container">
+            <div id="title">
+                <h1>Etch A Sketch</h1>
+            </div>
+            <div id="pixels-container">
+                <div id="rows"></div>
+            </div>
         </div>
-        <div id="pixels-container">
-            <div id="rows"></div>
+        <div id="change-size">
+            <div class="slider">
+            <label for="volumen">Size</label>
+            <input type="range" id="volumen" min="0" max="64" value="16" oninput="actualizarValor(this.value)">
+            <span id="valor">16</span>
+            </div>
+            <div class = "buttons">
+            <input type="color" id="colorPicker" value="#ff0000">
+            <button id="eraser">Eraser</button>
+            <button id="reset">Reset</button>
+            </div>
         </div>
     </div>
-    <div id="change-size">
-        <label for="volumen">Tamaño</label>
-        <input type="range" id="volumen" min="0" max="64" value="16" oninput="actualizarValor(this.value)">
-        <span id="valor">16</span>
-    </div>
-    <input type="color" id="colorPicker" value="#ff0000">
+    <footer>
+        <p>Created by</p>
+        <a href="https://github.com/LucasMati" target="_blank">
+            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo">
+            <span>LucasMati</span>
+        </a>
+    </footer>
 </body>
+
 <script src="script.js"></script>
 </html>
